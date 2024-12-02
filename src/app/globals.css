@@ -1,21 +1,302 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+}
+body{
+  font-family: Arial,sans-serif;
+  background-color: #E8ECD7;
+  color: black;
+}
+a{
+  text-decoration: none;
+  color: #c0c0c0;
+}
+h1,h2,h3 {
+  font-weight: bold;
+}
+/* Header styles*/
+.header {
+  background-color: black;
+  color:#cfb53b;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.header .logo {
+  font-size: 44px;
+  color: #cfb53b;
+  text-shadow: 2px 2px 3px #c0c0c0;
+ 
+
+  
+
+}
+
+.header nav{
+  display: flex;
+  font-size: 22px;
+  gap: 55px;
+}
+
+.header nav a{
+  color: #cfb53b;
+  font-weight: bold;
+}
+.header nav a:hover{
+  text-decoration:underline;
+}
+
+/* Footer styles*/
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+
+}
+footer p {
+  margin: 0;
+}
+
+/* Home page styles*/
+.hero{
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+display: flex;
+justify-content: left;
+align-items: center;
+text-align:center ;
+color: black;
+padding-left: 60px;
+}
+.hero h1{
+  font-size: 58px;
+  text-shadow: 2px 2px 5px #cfb53b;
+}
+
+.hero p{
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.hero button{
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: black;
+  color: #cfb53b;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero button :hover {
+  background-color: black;
+}
+
+/* About page style*/
+.about {
+  background-size: cover;
+  background-position: center;
+  color: black;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  align-items: center;
+  height: 100vh;
+  background-image: url('/13.jpg'); /* Add your image */
+}
+
+.about-content {
+  max-width: 600px; /* Maintain readable width */
+  text-align: left;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+  color: #fff; /* White text for contrast */
+  padding: 40px;
+  border-radius: 15px; /* Smooth rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Depth effect */
+  animation: fadeIn 1s ease-out; /* Smooth fade-in */
+  margin-left: 50px; /* Add spacing from the left side */
+  backdrop-filter: blur(5px); /* Blur effect for modern look */
+}
+
+.about-content h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: #cfb53b; /* Gold color for heading */
+}
+
+.about-content p {
+  padding-top: 10px;
+  font-size: 18px;
+  line-height: 1.8; /* Better readability */
+}
+
+.jwellery{
+  display: grid;
+  grid-template-columns: repeat(3 ,1fr);
+  gap: 20px;
+  margin-top: 40px;
+  margin: 50px;
+}
+.jwellery-card{
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;
+  text-align: center;
+}
+
+.jwellery-card im{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.jwellery-card h3{
+  margin-top: 19px;
+}
+
+.jwellery-card p{
+  color: #cfb53b;
+  font-size: 22px;
+
+}
+.jwellery-card .price{
+font-size: 28px;
+font-weight: bold;
+color: black;
+}
+.jwellery-card button{
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #cfb53b;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.jwellery-card button:hover{
+  background-color: #cfb53b;
+}
+.jwellery-card img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+
+}
+.jwellery-card:hover img{
+  transform: scale(1.1);
+}
+
+/* Contact style*/
+
+.contact {
+  max-width: 700px;
+  margin: 220px auto;
+  padding: 30px;
+  background-color: white; /* Gold color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+
+  .contact input,
+  .contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact button {
+padding: 10px 20px;
+background-color: black;
+  color: #d4af37;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.contact button :hover{
+background-color: black;
+}
+
+/* Fade-in Animation*/
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(20px);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.fade-in{
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+
+}
+
+@media(max-width:768px){
+  .header{
+    flex-direction: column;
+    text-align: center;
+  
+  }
+  .header.logo{
+    margin-bottom: 10px;
+  }
+  .header nav{
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .hero{
+    height: 70vh;
+    padding: 20px;
+    text-align: center;
+  }
+  .hero h1{
+    font-size: 36px;
+
+  }
+  .hero p {
+    font-size: 18px;
+  }
+  .hero button{
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+.jwellery{
+  grid-template-columns: 1fr;
+  margin: 20px;
+}
+.about{
+  padding: 40px 20px;
+}
+.about-content{
+  width: 100%;
+  padding: 20px;
+}
+
+.contact{
+  margin: 20px;
+  padding: 20px;
+}
 }
